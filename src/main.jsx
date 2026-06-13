@@ -3,12 +3,13 @@ import React from 'react'
 import App from './routes/App.jsx'
 import PostListProvider from './store/post-list-store.jsx'
 import ReactDOM from 'react-dom/client';
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
+// import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import {RouterProvider, createHashRouter} from "react-router-dom";
 import CreatePost, { createPostAction } from './components/CreatePost.jsx';
 import PostList from './components/PostList.jsx';
 import {postLoader} from './components/PostList.jsx';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
